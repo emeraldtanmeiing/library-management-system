@@ -41,4 +41,4 @@ bookSchema.virtual('coverPath').get(function(){
     }
 })
 
-module.exports = mongoose.model('Book', bookSchema);module.exports.coverBasePath = coverBasePath;
+module.exports = mongoose.model('Book', bookSchema);
