@@ -13,5 +13,8 @@ Search Books
             <img height="150px" width="100px" src="<%= book.coverPath %>" alt="book cover">
         </div>
         <div><%= book.title %></div>
+        <a href="/books/<%= book.id %>">View</a>
+        <a href="/books/<%= book.id %>/edit">Edit</a>
+        <%- include('../partials/deleteForm', { url: `/books/${book.id}`}) %>
     </div>
 <% }) %>

@@ -1,9 +1,11 @@
 <h2>Recently Added</h2>
 <% books.forEach(book => { %>
-    <div className="book">
-        <div>
-            <img height="150px" width="100px" src="<%= book.coverPath %>" alt="book cover">
+    <a href="/books/<%= book.id %>">
+        <div className="book">
+            <div>
+                <img height="150px" width="100px" src="<%= book.coverPath %>" alt="book cover">
+            </div>
+            <div><%= book.title %></div>
         </div>
-        <div><%= book.title %></div>
-    </div>
+    </a>
 <% }) %>
