@@ -1,20 +1,29 @@
-Search Books
+<h2 class="page-header">Search Book</h2>
 <form action="/books" method="GET">
-    <div>
-        <label>Title</label>
+    <div class="form-row">
+        <div class="form-item">
+            <label>Title</label>
         <input type="text" name="title" value=<%= searchOptions.title %>>
+        </div>
     </div>
-    <button type="submit">Search</button>
+    <div class="form-row button-row form-row-end">
+        <button class="button button-primary" type="submit">Search</button>
+    </div>
 </form>
 <br>
-<% books.forEach(book => { %>
+
+<%- include('../partials/bookGrid', { books: books, showAuthor: true })%> 
+
+<!-- <% books.forEach(book => { %>
     <div className="book">
         <div>
             <img height="150px" width="100px" src="<%= book.coverPath %>" alt="book cover">
         </div>
         <div><%= book.title %></div>
-        <a href="/books/<%= book.id %>">View</a>
-        <a href="/books/<%= book.id %>/edit">Edit</a>
-        <%- include('../partials/deleteForm', { url: `/books/${book.id}`}) %>
+        <div class="button-row">
+            <a class="button button-primary" href="/books/<%= book.id %>">View</a>
+            <a class="button button-primary" href="/books/<%= book.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', { url: `/books/${book.id}`}) %>
+        </div>
     </div>
-<% }) %>
+<% }) %> -->

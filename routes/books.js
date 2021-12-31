@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
             searchOptions.title = new RegExp(req.query.title.trim(), 'i')
         }
      
-        const books = await Book.find(searchOptions)
+        const books = await Book.find(searchOptions).populate('author').exec();
         res.render('books/index', { 
             books: books,
             searchOptions: req.query
@@ -63,7 +63,6 @@ router.put('/:id', async (req, res) => {
         res.redirect(`/books/${book.id}`);
 
     }catch (err){
-        console.log(err)
         if(book == null){
             res.redirect('/books');
         } else {
@@ -138,7 +137,9 @@ const renderFormPage = async (res, book, form, errorMessage = null) => {
 }
 
 const saveCover = (book, encodedCover) => {
-    if(encodedCover == null) return;
+    if(encodedCover == null || encodedCover == '' || encodedCover == undefined) {
+        return;
+    }
     const cover = JSON.parse(encodedCover);
     if(cover != null && imageMimeTypes.includes(cover.type)){
         book.cover = new Buffer.from(cover.data, 'base64');

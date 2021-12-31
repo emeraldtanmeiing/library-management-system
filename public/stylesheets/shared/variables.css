@@ -1,0 +1,21 @@
+:root {
+    /* --color-background: #DFCDC3; */
+    --color-background: #FFF;
+    --color-text-green: #719192;
+    --color-text-dark: #27292c;
+    --color-text-medium: #5F6769;
+    --color-text-light: rgb(209, 204, 204);
+    --color-text-light-2: rgb(233, 232, 232);
+    --color-text-danger: #f53535;
+    --color-text-danger-light: #fa8282;
+
+    --font-size-big: 2rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 0.8rem;
+
+    --font-weight-big: 600;
+    --font-weight-medium: 500;
+    --font-weight-small: 300;
+    
+    --border-radius: 0.3rem;
+}

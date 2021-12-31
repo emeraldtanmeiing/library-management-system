@@ -1,0 +1,47 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+
+.button {
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-big);
+    font-family: 'Poppins';
+    border-radius: var(--border-radius);
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-primary {
+    color: var(--color-text-light);
+    background-color: var(--color-text-dark);
+}
+
+.button-primary:hover {
+    color: var(--color-text-dark);
+    background-color: var(--color-text-green);
+}
+
+.button-danger {
+    color: var(--color-text-dark);
+    background-color: var(--color-text-danger);
+}
+
+.button-danger:hover {
+    background-color: var(--color-text-danger-light);
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+}
+
+.button-row > * {
+    margin: 0 0.2rem;
+}
+
+.button-row > *:first-child {
+    margin-left: 0;
+}

@@ -1,0 +1,49 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+
+.header-nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);    
+    margin-bottom: 1rem;
+}
+
+.header-nav-content {
+    min-width: 700px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.header-title {
+    color: var(--color-text-light);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-big);
+    font-style: italic;
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-nav a {
+    padding: 0 1rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+    list-style: none;
+}
+
+.header-nav a:hover, .header-title:hover {
+    color: var(--color-text-green);
+}

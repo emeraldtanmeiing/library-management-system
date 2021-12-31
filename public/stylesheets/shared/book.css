@@ -1,0 +1,91 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+
+:root {
+    --book-cover-width: 165px;
+    --book-cover-width-large: 180px;
+    --book-cover-aspect-ratio: 0.75;
+}
+
+.book-cover {
+    width: var(--book-cover-width);
+    height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+}
+
+.book-cover-large {
+    width: var(--book-cover-width-large);
+    height: calc(var(--book-cover-width-large) / var(--book-cover-aspect-ratio));
+}
+
+.book-grid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+}
+
+.book-grid-large {
+    display: grid;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
+
+.book-title, .book-author {
+    text-align: center;
+    line-height: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+}
+
+.book-author {
+    font-size: var(--font-size-small)
+}
+
+.book-detail {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.book-buttons {
+    display: grid;
+    justify-items: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas: 
+        "edit delete"
+        "author author";
+    grid-gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.book-author-btn {
+    grid-area: author;
+    justify-self: stretch;
+}
+
+.book-left {
+    margin: 10px;
+    display: grid;
+    justify-items: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas: 
+        "book"
+        "buttons";
+    grid-gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.book-right {
+    margin: 10px;
+}
+
+.book-right table {
+    width: 100%;
+    text-align: left;
+}
+
+.book-right table * {
+    font-weight: var(--font-weight-medium);
+}

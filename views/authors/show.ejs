@@ -1,18 +1,18 @@
-Show Authors
-<%=author.name%>
-<a href="/authors/<%= author.id %>/edit">Edit</a>
-    <%- include('../partials/deleteForm', { url: `/authors/${author.id}`}) %>
+<h2 class="page-header">Author Detail</h2>
 
-<% if(books.length > 0) {%>
-    Books by Author
-    <% books.forEach(book => { %>
-        <a href="/books/<%= book.id %>">
-            <div className="book">
-                <div>
-                    <img height="150px" width="100px" src="<%= book.coverPath %>" alt="book cover">
-                </div>
-                <div><%= book.title %></div>
-            </div>
-        </a>
-    <% }) %>
+<div class="authors">
+  <div class="author-row">
+    <div class="author-name">Name: <%=author.name%></div>
+    <div class="button-row">
+      <a class="button button-primary" href="/authors/<%= author.id %>/edit"
+        >Edit</a
+      >
+      <%- include('../partials/deleteForm', { url: `/authors/${author.id}`}) %>
+    </div>
+  </div>
+</div>
+
+<% if(books.length > 0){ %>
+    <h3>Books by Author</h3>
+    <%- include('../partials/bookGrid', { books: books})%> 
 <% } %>

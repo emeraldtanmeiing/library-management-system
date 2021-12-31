@@ -1,0 +1,14 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+
+.author-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid var(--color-text-light-2);
+}
+
+.authors > div:nth-of-type(1) {
+    border-top: none;
+}
