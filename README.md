@@ -5,6 +5,5 @@ Technologies used:
 - Node.js
 - Express
 - MongoDB
-\
 
 This system is created following the tutorial by Web Dev Simplified on Youtube: https://www.youtube.com/playlist?list=PLZlA0Gpn_vH8jbFkBjOuFjhxANC63OmXM.
