@@ -1,6 +1,6 @@
 # library-management-system
 This is a web-based library management system which allows users to add, view, edit and delete authors and books. \
-View live site at Heroku: https://library-management-systemm.herokuapp.com/ \
+View live site on Heroku: https://library-management-systemm.herokuapp.com/ \
 Technologies used:
 - Node.js
 - Express
